@@ -1,7 +1,7 @@
 import { GoogleGenAI, ThinkingLevel } from "@google/genai";
 import { Task } from "../types";
 
-const genAI = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY || "" });
+const genAI = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
 
 export async function generateTaskContent(task: Task, inputs: Record<string, string>) {
   const model = "gemini-3-flash-preview";
